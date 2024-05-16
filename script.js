@@ -8,11 +8,10 @@ button.addEventListener('click', (event) => {
   const pattern = /^[a-zA-Z0-9_+-]+(\.[a-zA-Z0-9_+-]+)*@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/;
 
   const mailCheck = pattern.test(email);
-  const errorElement = document.getElementById('js-error');
+  const errorElement = document.querySelector('#js-error');
 
   if (mailCheck) {
-    errorElement.classList.add('hidden'); // Hide error message
-  } else {
-    errorElement.classList.remove('hidden'); // Show error message
+    errorElement.classList.add('hidden');
+    errorElement.classList.remove('hidden');
   }
 });
