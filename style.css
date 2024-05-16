@@ -1,0 +1,166 @@
+:root {
+  --pink-color: #F0D0D5;
+  --gray-color: #ddd;
+  --red-color: #F96464;
+  --main-gradation: linear-gradient(90deg, var(--pink-color) 0%, var(--red-color) 100%);
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-image: url("/images/bg-pattern-desktop.svg");
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  gap: 24px;
+  background-size: cover;
+}
+
+.contents {
+  width: 70%;
+  flex: 1;
+  display: flex;
+  place-content: center;
+}
+
+.innercontents {
+  max-width: 480px;
+  width: 100%;
+}
+
+.sidecontents {
+  width: auto;
+  flex: 1;
+  height: 100%;
+}
+
+.img-aside {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.img-logo {
+  max-width: 200px;
+  width: 100%;
+}
+
+.title {
+  font-size: 5rem;
+  letter-spacing: 0.16em;
+  font-weight: 400;
+}
+
+.title-pink {
+  color: var(--pink-color);
+}
+
+.text {
+  color: var(--pink-color);
+  line-height: 160%;
+}
+
+.form {
+  position: relative;
+  display: flex;
+  margin-top: 24px;
+}
+
+.input {
+  border: 1px solid var(--gray-color);
+  border-radius: 80px;
+  padding: 16px 24px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.input::placeholder {
+  color: var(--pink-color);
+}
+
+.input[type="email"]:focus {
+  outline: none;
+  border: 1px solid var(--pink-color);
+}
+
+.button {
+  padding: 14px 48px;
+  border-radius: 80px;
+  border: none;
+  background: var(--main-gradation);
+  position: absolute;
+  right: 0px;
+  box-shadow: 0 8px 24px rgb(0 0 0 /.16);
+  transition: all 0.5s;
+}
+
+.button:hover {
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgb(0 0 0 /.24);
+  transition: all 0.5s;
+}
+
+.error {
+  font-size: 12px;
+  color: var(--red-color);
+  margin-top: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .container {
+    flex-direction: column-reverse;
+    padding-top: 22%;
+    position: relative;
+  }
+
+  .contents {
+    width: 100%;
+  }
+
+  .img-logo {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 200px;
+  }
+
+  .sidecontents {
+    width: 100%;
+    height: auto;
+    flex: 0;
+  }
+
+  .sidecontents .sp {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 1;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .innercontents {
+    padding: 0 24px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .img-logo {
+    position: absolute;
+    top: 2.5%;
+    left: 10%;
+    width: 140px;
+  }
+}
