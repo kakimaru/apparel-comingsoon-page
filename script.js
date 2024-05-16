@@ -1,7 +1,7 @@
-const button = document.getElementById('button');
+const button = document.querySelector('.button');
 
 button.addEventListener('click', (event) => {
-  event.preventDefault(); // Prevent default form submission
+  event.preventDefault();
 
   const emailInput = document.querySelector('.js-mail');
   const email = emailInput.value.trim();
