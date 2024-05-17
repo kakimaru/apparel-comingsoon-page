@@ -27,7 +27,7 @@ body {
 }
 
 .container {
-  background-image: url("/docs/images/bg-pattern-desktop.svg");
+  background-image: url("images/bg-pattern-desktop.svg");
   display: flex;
   flex-direction: column-reverse;
   padding-top: 22%;
