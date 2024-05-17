@@ -12,6 +12,7 @@ button.addEventListener('click', (event) => {
 
   if (mailCheck) {
     errorElement.classList.add('hidden');
+  } else {
     errorElement.classList.remove('hidden');
   }
 });
